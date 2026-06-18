@@ -1,17 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>E-Commerce</title>
+  <meta charset="UTF-8">
+  <title>ShopX - Amazon Style Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>E-Commerce Store</h1>
+<!-- 🔥 TOP NAVBAR -->
+<header class="navbar">
+  <div class="logo">ShopX</div>
 
-<div id="products"></div>
+  <input type="text" id="search" placeholder="Search products...">
 
-<h2>Cart</h2>
-<div id="cart"></div>
+  <div class="nav-right">
+    <span onclick="showCart()">🛒 Cart (<span id="cartCount">0</span>)</span>
+  </div>
+</header>
+
+<!-- 🔥 HERO BANNER -->
+<section class="hero">
+  <h1>Big Deals, Big Savings</h1>
+  <p>Shop the best products like Amazon</p>
+</section>
+
+<!-- 🔥 PRODUCT SECTION -->
+<section class="products-section">
+  <h2>🔥 Trending Products</h2>
+  <div id="products" class="products-grid"></div>
+</section>
+
+<!-- 🔥 CART PANEL -->
+<div id="cartPanel" class="cart-panel hidden">
+  <h2>Your Cart</h2>
+  <div id="cartItems"></div>
+  <button onclick="checkout()">Checkout</button>
+</div>
 
 <script src="app.js"></script>
 </body>
